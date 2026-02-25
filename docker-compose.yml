@@ -1,0 +1,13 @@
+services:
+  webtools:
+    build: .
+    image: webtools:latest
+    container_name: webtools
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - PORT=3000
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    env_file:
+      - .env

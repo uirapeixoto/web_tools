@@ -112,7 +112,7 @@ app.post('/api/mermaid/ai-fix', async (req, res) => {
 });
 
 // Fallback para SPA simples (pode servir index.html por padrão)
-app.get('*', (req, res) => {
+app.get('/*splat', (req, res) => {
   res.sendFile(path.join(publicDir, 'index.html'));
 });
 
