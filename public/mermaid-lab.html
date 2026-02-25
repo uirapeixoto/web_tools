@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Laboratório Mermaid + IA</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="page-with-toolbar">
+    <header class="app-header">
+      <div class="app-header-inner">
+        <div class="brand">
+          <a class="brand-logo-link" href="/">
+            <span class="brand-logo">WT</span>
+          </a>
+          <div class="brand-text">
+            <span class="brand-title">Laboratório Mermaid + IA</span>
+            <span class="brand-subtitle"
+              >Criação, validação e correção de diagramas</span
+            >
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="/markdown-editor.html">Markdown</a>
+          <a href="/mermaid-lab.html" aria-current="page">Mermaid + IA</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="toolbar">
+        <div class="toolbar-group">
+          <button id="btnExample" class="btn ghost" type="button">
+            Exemplo
+          </button>
+        </div>
+        <div class="toolbar-group">
+          <button id="btnValidate" class="btn outline" type="button">
+            Validar
+          </button>
+          <button id="btnAiFix" class="btn primary" type="button">
+            Corrigir com IA
+          </button>
+          <button id="btnClear" class="btn ghost" type="button">Limpar</button>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="panel panel-editor">
+          <div class="panel-header">
+            <h2>Diagrama Mermaid</h2>
+            <span class="panel-subtitle">
+              Escreva seu diagrama usando a sintaxe Mermaid (por exemplo:
+              <code>graph TD</code>).
+            </span>
+          </div>
+          <textarea
+            id="mermaidInput"
+            class="editor-textarea"
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="panel panel-preview">
+          <div class="panel-header">
+            <h2>Pré-visualização</h2>
+            <span id="statusText" class="panel-subtitle status-text">
+              Aguardando diagrama...
+            </span>
+          </div>
+          <div id="mermaidPreview" class="preview preview-mermaid"></div>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="feedback-header">
+          <h3>Validação</h3>
+        </div>
+        <pre id="validationOutput" class="feedback-body"></pre>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="app-footer-inner">
+        <span
+          >A correção por IA depende da variável de ambiente
+          <code>OPENAI_API_KEY</code> configurada no servidor.</span
+        >
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="/js/mermaid-lab.js"></script>
+  </body>
+  </html>
+

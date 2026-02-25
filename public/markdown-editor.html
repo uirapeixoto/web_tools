@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Editor Markdown + Mermaid</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="page-with-toolbar">
+    <header class="app-header">
+      <div class="app-header-inner">
+        <div class="brand">
+          <a class="brand-logo-link" href="/">
+            <span class="brand-logo">WT</span>
+          </a>
+          <div class="brand-text">
+            <span class="brand-title">Editor Markdown + Mermaid</span>
+            <span class="brand-subtitle">Criação e edição de arquivos .md</span>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="/markdown-editor.html" aria-current="page">Markdown</a>
+          <a href="/mermaid-lab.html">Mermaid + IA</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="toolbar">
+        <div class="toolbar-group">
+          <label for="fileName" class="sr-only">Nome do arquivo</label>
+          <input
+            type="text"
+            id="fileName"
+            class="input"
+            placeholder="nome-do-arquivo.md"
+          />
+        </div>
+        <div class="toolbar-group">
+          <button id="btnNew" class="btn ghost" type="button">Novo</button>
+          <button id="btnDownload" class="btn primary" type="button">
+            Download .md
+          </button>
+          <label class="btn outline">
+            Abrir .md
+            <input
+              id="fileInput"
+              type="file"
+              accept=".md,.markdown,text/markdown"
+              hidden
+            />
+          </label>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="panel panel-editor">
+          <div class="panel-header">
+            <h2>Markdown</h2>
+            <span class="panel-subtitle">
+              Use blocos de código com linguagem <code>mermaid</code> para
+              criar diagramas.
+            </span>
+          </div>
+          <textarea
+            id="markdownInput"
+            class="editor-textarea"
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="panel panel-preview">
+          <div class="panel-header">
+            <h2>Pré-visualização</h2>
+            <span class="panel-subtitle">
+              Renderização em tempo real com suporte a Mermaid.
+            </span>
+          </div>
+          <div id="markdownPreview" class="preview"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="app-footer-inner">
+        <span>Dica: crie blocos de código assim:</span>
+        <code> ```mermaid </code>
+      </div>
+    </footer>
+
+    <!-- Bibliotecas para Markdown e Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="/js/markdown-editor.js"></script>
+  </body>
+  </html>
+

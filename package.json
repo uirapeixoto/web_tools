@@ -1,0 +1,26 @@
+{
+  "name": "webtools",
+  "version": "1.0.0",
+  "description": "Coleção de ferramentas web para desenvolvimento: edição de Markdown com Mermaid e laboratório de diagramas Mermaid com validação e IA.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown",
+    "mermaid",
+    "diagramas",
+    "ferramentas",
+    "desenvolvimento"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
+  }
+}

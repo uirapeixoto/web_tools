@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>WebTools Dev - Início</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header-inner">
+        <div class="brand">
+          <span class="brand-logo">WT</span>
+          <div class="brand-text">
+            <span class="brand-title">WebTools Dev</span>
+            <span class="brand-subtitle"
+              >Ferramentas para Markdown e diagramas Mermaid</span
+            >
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="/markdown-editor.html">Editor Markdown + Mermaid</a>
+          <a href="/mermaid-lab.html">Laboratório Mermaid + IA</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Seu mini painel de ferramentas para desenvolvimento</h1>
+          <p>
+            Edite documentos Markdown com suporte a diagramas Mermaid e experimente
+            um laboratório dedicado para criar, validar e corrigir diagramas com
+            auxílio de IA.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="/markdown-editor.html">
+              Abrir editor Markdown
+            </a>
+            <a class="btn ghost" href="/mermaid-lab.html">
+              Abrir laboratório Mermaid
+            </a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="hero-card">
+            <h2>Foque no conteúdo</h2>
+            <p>
+              Layout limpo, tipografia confortável e interface responsiva que funciona
+              bem em monitores grandes e telas menores.
+            </p>
+          </div>
+          <div class="hero-card">
+            <h2>Pronto para Docker e CasaOS</h2>
+            <p>
+              Esta aplicação foi pensada para rodar em containers Docker, incluindo
+              cenários de uso no CasaOS.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-grid">
+        <article class="tool-card">
+          <h3>Editor Markdown + Mermaid</h3>
+          <p>
+            Edite textos em Markdown, visualize em tempo real e incorpore
+            diagramas Mermaid em blocos de código dedicados.
+          </p>
+          <ul>
+            <li>Pré-visualização lado a lado</li>
+            <li>Suporte a blocos <code> ```mermaid </code></li>
+            <li>Download do arquivo em formato <code>.md</code></li>
+          </ul>
+        </article>
+
+        <article class="tool-card">
+          <h3>Laboratório Mermaid com IA</h3>
+          <p>
+            Desenhe diagramas Mermaid, valide sintaxe e, quando precisar,
+            peça ajuda para a IA sugerir correções.
+          </p>
+          <ul>
+            <li>Validação de sintaxe no navegador</li>
+            <li>Pré-visualização do diagrama</li>
+            <li>Endpoint de correção via IA (OpenAI)</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="app-footer-inner">
+        <span>WebTools Dev &mdash; feito para apoiar seu fluxo de trabalho.</span>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+  </html>
+
